@@ -1,0 +1,151 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-Yellow: hsl(71, 73%, 54%);
+    --light-Gray: hsl(204, 43%, 93%);
+    --grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Karla',sans-serif;
+    background-color: var(--light-Gray);
+}
+
+.container{
+    max-width: 500px;
+    margin: 30px;
+}
+
+.card{
+    margin-top: 40px;
+    max-width: 340px;
+}
+.card-top{
+    background-color: white;
+    padding: 20px;
+}
+
+.card-top p:nth-child(1){
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: var(--cyan);
+}
+
+.card-top p:nth-child(2){
+    color: var(--bright-Yellow);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.card-top p:nth-child(3){
+    color: var(--grayish-Blue);
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 2;
+}
+
+.card-middle{
+    padding: 20px;
+    background-color: var(--cyan);
+}
+
+.card-middle p:nth-child(1){
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.dollar{
+    font-size: 30px;
+    color: white;
+}
+.card-middle p:nth-child(2){
+    color: hsla(255, 100%, 100%, 55%);
+    
+}
+
+.card-middle p:nth-child(3){
+    color: white;
+    margin: 10px 0 15px 0;
+
+}
+
+.card-middle button{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 10px;
+    width: 100%;
+    background-color: var(--bright-Yellow);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.card-bottom{
+    padding: 20px;
+    background-color:hsla(179, 62%, 43%, 65%);
+}
+
+
+.card-bottom p:nth-child(1){
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card-bottom p{
+    color: hsla(255, 100%, 100%, 55%);
+    line-height: 1.5;
+}
+
+@media (min-width: 800px) {
+
+    body{
+        align-items: center;
+        font-size: 17px;
+    }
+    .container{
+        max-width: 1000px;
+    }
+
+    .card{
+        max-width: 650px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-top{
+        padding: 35px;
+        grid-area: 1/1/2/3;
+    }
+
+    .card-top p:nth-child(1){
+        font-size: 25px;
+    }
+
+    .card-middle{
+        padding: 35px;
+    }
+
+    .card-middle p:nth-child(1){
+        font-size: 20px;
+    }
+    .card-bottom{
+        padding: 35px;
+    }
+}
