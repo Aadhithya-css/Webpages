@@ -1,0 +1,154 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-Dark-Blue: hsl(234, 12%, 34%);
+    --grayish-Blue: hsl(229, 6%, 66%);
+    --very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--very-Light-Gray);
+}
+
+.container{
+    padding: 50px 20px;
+    max-width: 450px;
+}
+
+.head{
+    text-align: center;
+    font-size: 25px;
+}
+
+.main-head{
+    font-weight: 200;
+    color: var(--grayish-Blue);
+}
+
+.main-content{
+    font-weight: 600;
+    color: var(--very-Dark-Blue);
+}
+
+.artificial{
+    text-align: center;
+    padding: 30px;
+    color: var(--grayish-Blue);
+}
+
+.card{
+    padding: 10px;
+    min-width: 375px;
+    max-width: 400px;
+}
+
+.card div{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    min-height: 225px;
+    min-width: 250px;
+}
+
+.card-head{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-content{
+    font-weight: 200;
+    color: var(--grayish-Blue);
+}
+
+.supervisor{
+    position: relative;
+    border-top: 5px solid var(--cyan);
+    border-radius: 10px;
+}
+
+.team-builder{
+    position: relative;
+    border-top: 5px solid var(--red);
+    border-radius: 10px;
+}
+
+.karma{
+    position: relative;
+    border-top: 5px solid var(--orange);
+    border-radius: 10px;
+}
+
+.calculator{
+    position: relative;
+    border-top: 5px solid var(--blue);
+    border-radius: 10px;    
+}
+
+.img{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    transform: scale(0.8);
+}
+
+@media (min-width: 900px) {
+    .artificial{
+        padding: 20px;
+    }
+    
+    .container{
+        padding: 0px;
+    }
+
+    .card{
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+        font-size: 12px;
+        grid-template-rows: repeat(4, 100px);
+    }
+
+    .card-head{
+        font-size: 17px;
+    }
+
+    .card div{
+        max-width: 300px;
+        margin: 0px;
+    }
+
+    .supervisor{
+        grid-area: 2/1/4/2;
+    }
+
+    .team-builder{
+        grid-area: 1/2/3/3;
+    }
+
+    .karma{
+        grid-area: 3/2/5/3;
+    }
+
+    .calculator{
+        grid-area: 2/3/4/4;
+    }
+}

@@ -1,0 +1,107 @@
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-blue);
+    /* background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    margin: 0 20px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.containers{
+    max-width: 400px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.img img{
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.main-heading{
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--dark-blue);
+}
+
+.main-content{
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+
+.price-p1{
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.price-p2{
+    color: var(--desaturated-blue);
+}
+
+.change{
+    color: var(--bright-blue);
+    font-weight: 900;
+}
+
+.change:hover{
+    text-decoration: none;
+    color: hsl(245, 75%, 70%)
+}
+
+.payment{
+    background-color: var(--bright-blue);
+    border-radius: 7px;
+    border: none;
+    padding: 1em;
+    color:white;
+    margin-bottom: 1em;
+}
+
+.payment:hover{
+    filter: brightness(120%);
+}
+
+.cancel{
+    color: var(--desaturated-blue);
+    padding: 1em;
+    border: none;
+    background-color: transparent;
+    font-weight: 900;
+    width: 100%
+}
+
+.cancel:hover{
+    color: var(--dark-blue);
+}
+
+
+@media (min-width: 600px) {
+    body{
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
